@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Proverbs Everyday</title>
+
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+    <script defer type="module" src="./src/scripts/main.js"></script>
+  </head>
+  <body>
+    <main class="main-grid">
+      <header class="main-header">
+        <nav class="main-nav">
+          <ul class="nav-list" role="list">
+            <li class="nav-item">
+              <button class="btn btn-link" type="button">
+                Today's Proverb
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-link" type="button">Translations</button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-link" type="button">
+                View Other Chapters
+              </button>
+            </li>
+          </ul>
+          <h1>Proverbs Everyday</h1>
+          <ul class="nav-list" role="list">
+            <li class="nav-item">
+              <button class="btn btn-link" type="button">Back</button>
+            </li>
+          </ul>
+        </nav>
+        <p>Today: 29 Sep 2022</p>
+      </header>
+
+      <div class="content">
+        <h2>Settings</h2>
+
+        <form action="#" class="settings-form">
+          <div class="form-group">
+            <label for="theme" class="form-label">Theme</label>
+            <select name="theme" id="theme" class="form-input">
+              <option value="">Default</option>
+              <option value="dark">Dark</option>
+              <option value="bluegray">Blue-Gray</option>
+              <option value="pink">Pretty Pink</option>
+              <option value="professional">Professional</option>
+              <option value="lamborghini">Lamborghini</option>
+              <option value="tehtarik">Teh Tarik</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="translation" class="form-label"
+              >Preferred Translation</label
+            >
+            <select name="translation" id="translation" class="form-input">
+              <option value="KJV">King James Version (KJV)</option>
+              <option value="YLT">Young's Literal Translation (YLT)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="size" class="form-label">Text Size</label>
+            <select name="size" id="size" class="form-input">
+              <option value="small">Small</option>
+              <option value="regular">Regular</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+
+          <p class="text-danger">Click "save" for changes to take place.</p>
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="button">Save</button>
+            <button class="btn btn-secondary" type="button">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <footer class="main-footer">
+        <p class="text-center">
+          <em>Proverbs Everyday V2 &copy; Davina Leong, 2022</em>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
