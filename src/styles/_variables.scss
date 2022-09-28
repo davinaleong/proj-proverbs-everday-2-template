@@ -303,6 +303,7 @@ $styles: (
 
 // C.6. Spacers
 $spacers: (
+  "auto": auto,
   0: 0,
   100: 0.25rem,
   200: 0.5rem,
@@ -451,4 +452,16 @@ $positions: (
 
 @function position($position) {
   @return map-get($positions, $position);
+}
+
+// C.14. Line Heights
+$line-heights: (
+  "normal": normal,
+  0: 0,
+  100: 0.9em,
+  200: 1.2em,
+);
+
+@function line-height($line-height) {
+  @return map-get($line-heights, $line-height);
 }
