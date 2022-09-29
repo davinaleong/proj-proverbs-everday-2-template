@@ -33,6 +33,7 @@ $clr-neutral-900: color("grey", 900);
   --clr-blockquote-text: #{$clr-neutral-900};
   --clr-blockquote-bg: #{$clr-neutral-100};
   --clr-footer-bg: #{$clr-neutral-100};
+  --clr-card-border: #{$clr-neutral-100};
 
   --ff-primary: #{$ff-primary};
   --ff-secondary: #{$ff-secondary};
@@ -97,14 +98,14 @@ a:where(:hover, :visited, :active) {
 }
 
 .btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
   border: none;
   font-size: size(300);
 }
 
 .btn-link {
+  justify-content: center;
   background-color: transparent;
   color: var(--clr-action);
   padding: 0;
@@ -112,6 +113,16 @@ a:where(:hover, :visited, :active) {
 
 .btn-link:where(:hover, :focus-within) {
   color: var(--clr-action-dark);
+}
+
+.btn-card {
+  padding: spacer(200);
+  border: thin solid var(--clr-card-border);
+  color: var(--clr-action);
+  background-color: transparent;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
 }
 
 .container {
@@ -214,6 +225,12 @@ a:where(:hover, :visited, :active) {
 
 .text {
   font-size: size(400);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: spacer(400);
 }
 
 sup,
