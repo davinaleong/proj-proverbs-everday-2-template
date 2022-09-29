@@ -493,7 +493,7 @@ $justify-items: (
 
 // C.11. Box Shadows
 $box-shadows: (
-  400: #{0 0.5em 0.7em 0 hsla(0, 0%, 0%, 0.2)},
+  400: #{0.1em 0.1em 0.3em 0 hsla(0, 0%, 0%, 0.2)},
 );
 
 @function box-shadow($box-shadow) {

@@ -14,6 +14,8 @@ $clr-action-light: color("blue", 300);
 $clr-action: color("blue", 500);
 $clr-action-dark: color("blue", 700);
 
+$clr-danger-400: color("red", 500);
+
 $clr-neutral-50: color("grey", 50);
 $clr-neutral-100: color("grey", 100);
 $clr-neutral-200: color("grey", 200);
@@ -34,6 +36,8 @@ $clr-neutral-900: color("grey", 900);
   --clr-blockquote-bg: #{$clr-neutral-100};
   --clr-footer-bg: #{$clr-neutral-100};
   --clr-card-border: #{$clr-neutral-100};
+  --clr-form-bg: #{$clr-neutral-100};
+  --clr-form-input-bg: #{$clr-neutral-50};
 
   --ff-primary: #{$ff-primary};
   --ff-secondary: #{$ff-secondary};
@@ -47,6 +51,8 @@ $clr-neutral-900: color("grey", 900);
   --clr-action-light: #{$clr-action-light};
   --clr-action: #{$clr-action};
   --clr-action-dark: #{$clr-action-dark};
+
+  --clr-danger-400: #{$clr-danger-400};
 
   --clr-neutral-50: #{$clr-neutral-50};
   --clr-neutral-100: #{$clr-neutral-100};
@@ -93,8 +99,12 @@ a {
   text-decoration: none;
 }
 
-a:where(:hover, :visited, :active) {
+a:where(:hover, :visited, :active, :focus-within) {
   color: var(--clr-action);
+}
+
+.clr-danger-400 {
+  color: var(--clr-danger-400);
 }
 
 .btn {
@@ -111,7 +121,7 @@ a:where(:hover, :visited, :active) {
   padding: 0;
 }
 
-.btn-link:where(:hover, :focus-within) {
+.btn-link:where(:hover, :visited, :active, :focus-within) {
   color: var(--clr-action-dark);
 }
 
@@ -121,6 +131,30 @@ a:where(:hover, :visited, :active) {
   color: var(--clr-action);
   background-color: transparent;
   flex-direction: column;
+}
+
+.btn-primary {
+  color: color("grey", 50);
+  background-color: color("blue", 500);
+  padding: spacer(100) spacer(200);
+  border-radius: border-radius(100);
+  box-shadow: box-shadow(400);
+}
+
+.btn-primary:where(:hover, :visited, :active, :focus-within) {
+  background-color: color("blue", 400);
+}
+
+.btn-secondary {
+  color: color("grey", 50);
+  background-color: color("grey", 500);
+  padding: spacer(100) spacer(200);
+  border-radius: border-radius(100);
+  box-shadow: box-shadow(400);
+}
+
+.btn-secondary:where(:hover, :visited, :active, :focus-within) {
+  background-color: color("grey", 400);
 }
 
 .container {
@@ -178,7 +212,7 @@ a:where(:hover, :visited, :active) {
   font-style: italic;
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 37.49em) {
   .main-header-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -244,6 +278,49 @@ sub,
   border-radius: border-radius(50);
   color: var(--clr-blockquote-text);
   background-color: var(--clr-blockquote-bg);
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: spacer(200);
+  padding: spacer(400);
+  background-color: var(--clr-form-bg);
+  border-radius: border-radius(100);
+}
+
+.form-group-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: spacer(50) spacer(100);
+}
+
+@media (min-width: 37.5em) {
+  .form-group-flex {
+    flex-direction: row;
+  }
+}
+
+.form-label {
+  display: block;
+  min-width: 10em;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  border: none;
+  min-height: 2em;
+  padding: spacer(50);
+  border-radius: border-radius(50);
+  color: var(--clr-text);
+  background-color: var(--clr-form-input-bg);
+}
+
+.form-buttons-flex {
+  display: flex;
+  gap: spacer(100);
 }
 
 .main-footer {
