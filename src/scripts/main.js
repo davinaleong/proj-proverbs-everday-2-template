@@ -1,23 +1,18 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+console.log(`main.js loaded`)
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Attributes
+const attrDataOpen = `data-open`
 
-setupCounter(document.querySelector('#counter'))
+// Elements
+const mainHeaderEl = document.querySelector(`[data-element=main-header]`)
+
+const closeBtnEl = document.querySelector(`[data-element=close]`)
+const menuBtnEl = document.querySelector(`[data-element=menu]`)
+
+menuBtnEl.addEventListener(`click`, (e) => {
+    mainHeaderEl.setAttribute(attrDataOpen, true)
+})
+
+closeBtnEl.addEventListener(`click`, (e) => {
+    mainHeaderEl.removeAttribute(attrDataOpen)
+})

@@ -12,38 +12,83 @@
   <body>
     <main class="main-grid">
       <header class="main-header">
-        <nav class="main-nav">
-          <ul class="nav-list" role="list">
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">
-                Today's Proverb
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">Translations</button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">
-                View Other Chapters
-              </button>
-            </li>
-          </ul>
-          <h1>Proverbs Everyday</h1>
-          <ul class="nav-list" role="list">
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">Back</button>
-            </li>
-          </ul>
-        </nav>
-        <p>Today: 29 Sep 2022</p>
+        <div class="container">
+          <div class="main-header-grid | p-y-200" data-element="main-header">
+            <nav class="main-nav main-nav-left">
+              <ul class="nav-list" role="list">
+                <li class="nav-item">
+                  <button
+                    class="btn btn-link"
+                    type="button"
+                    data-element="close"
+                  >
+                    Close
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="btn btn-link"
+                    type="button"
+                    data-element="todays-proverb"
+                  >
+                    Today's Proverb
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="btn btn-link"
+                    type="button"
+                    data-element="translations"
+                  >
+                    Translations
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="btn btn-link"
+                    type="button"
+                    data-element="view-chapters"
+                  >
+                    View Chapters
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            <h1 class="main-header-brand">Proverbs Everyday</h1>
+
+            <nav class="main-nav main-nav-right">
+              <ul class="nav-list" role="list">
+                <li class="nav-item">
+                  <button
+                    class="btn btn-link"
+                    type="button"
+                    data-element="back"
+                  >
+                    Back
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="btn btn-link"
+                    type="button"
+                    data-element="menu"
+                  >
+                    Menu
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            <p class="main-header-date">Today: 29 Sep 2022</p>
+          </div>
+        </div>
       </header>
 
-      <div class="content">
-        <h2>Proverbs 29</h2>
+      <div class="container content | p-y-400">
+        <h2 class="fsize-800">Proverbs 29</h2>
 
-        <p>King James Version (KJV)</p>
-
-        <blockquote>Public Domain</blockquote>
+        <p class="fsize-500 p-b-400">King James Version (KJV)</p>
 
         <div class="text">
           <p>
@@ -160,13 +205,17 @@
             <sup>23</sup> He shall die without instruction; and in the greatness
             of his folly he shall go astray.
           </p>
+
+          <blockquote class="copyright">Public Domain</blockquote>
         </div>
       </div>
 
-      <footer class="main-footer">
-        <p class="text-center">
-          <em>Proverbs Everyday V2 &copy; Davina Leong, 2022</em>
-        </p>
+      <footer class="main-footer p-y-400">
+        <div class="container">
+          <p class="ta-center | fsize-200">
+            <em>Proverbs Everyday V2 &copy; Davina Leong, 2022</em>
+          </p>
+        </div>
       </footer>
     </main>
   </body>

@@ -2,7 +2,7 @@
 
 // C.1. Colors
 $colors: (
-  "gray": (
+  "grey": (
     50: #fafafa,
     100: #f5f5f5,
     200: #ededed,
@@ -16,15 +16,15 @@ $colors: (
   ),
   "red": (
     50: #ffebee,
-    10: #ffccd1,
-    20: #ef9a9a,
-    30: #e57171,
-    40: #ef5552,
-    50: #f44034,
-    60: #e53734,
-    70: #d33131,
-    80: #c72929,
-    90: #b51c1c,
+    100: #ffccd1,
+    200: #ef9a9a,
+    300: #e57171,
+    400: #ef5552,
+    500: #f44034,
+    600: #e53734,
+    700: #d33131,
+    800: #c72929,
+    900: #b51c1c,
   ),
   "pink": (
     50: #fce3ec,
@@ -234,7 +234,11 @@ $colors: (
 
 @function color($color, $tint) {
   $map: map-get($colors, $color);
-  @return map-get($map, $tint);
+  @if $map {
+    @return map-get($map, $tint);
+  } @else {
+    @return "";
+  }
 }
 
 // C.2. Font Families
@@ -252,7 +256,12 @@ $families: (
 );
 
 @function family($family) {
-  @return map-get($families, $family);
+  $value: map-get($families, $family);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.3. Font Sizes
@@ -270,7 +279,12 @@ $sizes: (
 );
 
 @function size($size) {
-  @return map-get($sizes, $size);
+  $value: map-get($sizes, $size);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.4. Font Weights
@@ -287,7 +301,12 @@ $weights: (
 );
 
 @function weight($weight) {
-  @return map-get($weights, $weight);
+  $value: map-get($weights, $weight);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.5. Font Styles
@@ -298,28 +317,47 @@ $styles: (
 );
 
 @function style($style) {
-  @return map-get($styles, $style);
+  $value: map-get($styles, $style);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.6. Spacers
 $spacers: (
   "auto": auto,
   0: 0,
-  100: 0.25rem,
-  200: 0.5rem,
-  300: 0.75rem,
-  400: 1rem,
-  500: 1.5rem,
-  600: 2rem,
-  700: 3rem,
-  800: 4rem,
-  900: 5rem,
-  1000: 6rem,
-  1100: 7rem,
+  50: 0.25rem,
+  100: 0.5rem,
+  200: 0.75rem,
+  300: 1rem,
+  400: 1.5rem,
+  500: 2rem,
+  600: 3rem,
+  700: 4rem,
+  800: 5rem,
+  900: 6rem,
+  1000: 7rem,
 );
 
 @function spacer($spacer) {
-  @return map-get($spacers, $spacer);
+  $value: map-get($spacers, $spacer);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
+}
+
+@function border-radius($size) {
+  $value: map-get($spacers, $size);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.7. Text Decorations
@@ -334,7 +372,12 @@ $decorations: (
 );
 
 @function deocration($deocration) {
-  @return map-get($deocrations, $deocration);
+  $value: map-get($deocrations, $deocration);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.8. Text Transforms
@@ -346,7 +389,12 @@ $transforms: (
 );
 
 @function transform($transform) {
-  @return map-get($transforms, $transform);
+  $value: map-get($transforms, $transform);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.9. Text Aligns
@@ -358,7 +406,12 @@ $aligns: (
 );
 
 @function align($align) {
-  @return map-get($aligns, $align);
+  $value: map-get($aligns, $align);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.10. Displays
@@ -374,7 +427,12 @@ $displays: (
 );
 
 @function display($display) {
-  @return map-get($displays, $display);
+  $value: map-get($displays, $display);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.10.a. Align Items
@@ -389,7 +447,12 @@ $align-items: (
 );
 
 @function align-item($align-item) {
-  @return map-get($align-items, $align-item);
+  $value: map-get($align-items, $align-item);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.10.b. Justify Contents
@@ -403,7 +466,12 @@ $justify-contents: (
 );
 
 @function justify-content($justify-content) {
-  @return map-get($justify-contents, $justify-content);
+  $value: map-get($justify-contents, $justify-content);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.10.c. Justify Items
@@ -415,7 +483,12 @@ $justify-items: (
 );
 
 @function justify-item($justify-item) {
-  @return map-get($justify-items, $justify-item);
+  $value: map-get($justify-items, $justify-item);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.11. Box Shadows
@@ -424,22 +497,32 @@ $box-shadows: (
 );
 
 @function box-shadow($box-shadow) {
-  @return map-get($box-shadows, $box-shadow);
+  $value: map-get($box-shadows, $box-shadow);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.12. Letter Spacing
 $letter-spacings: (
+  "auto": auto,
   50: 0,
   100: 0.03em,
   200: 0.05em,
   300: 0.08em,
   400: 0.1em,
   500: 0.3em,
-  "auto: auto",
 );
 
 @function letter-spacing($letter-spacing) {
-  @return map-get($letter-spacings, $letter-spacing);
+  $value: map-get($letter-spacings, $letter-spacing);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.13. Positions
@@ -451,7 +534,12 @@ $positions: (
 );
 
 @function position($position) {
-  @return map-get($positions, $position);
+  $value: map-get($positions, $position);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }
 
 // C.14. Line Heights
@@ -463,5 +551,10 @@ $line-heights: (
 );
 
 @function line-height($line-height) {
-  @return map-get($line-heights, $line-height);
+  $value: map-get($line-heights, $line-height);
+  @if $value {
+    @return $value;
+  } @else {
+    @return "";
+  }
 }

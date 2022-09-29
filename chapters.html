@@ -12,33 +12,43 @@
   <body>
     <main class="main-grid">
       <header class="main-header">
-        <nav class="main-nav">
-          <ul class="nav-list" role="list">
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">
-                Today's Proverb
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">Translations</button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">
-                View Other Chapters
-              </button>
-            </li>
-          </ul>
-          <h1>Proverbs Everyday</h1>
-          <ul class="nav-list" role="list">
-            <li class="nav-item">
-              <button class="btn btn-link" type="button">Back</button>
-            </li>
-          </ul>
-        </nav>
-        <p>Today: 29 Sep 2022</p>
+        <div class="main-header-grid container | p-y-100">
+          <nav class="main-nav main-nav-left">
+            <ul class="nav-list" role="list">
+              <li class="nav-item">
+                <button class="btn btn-link" type="button">
+                  Today's Proverb
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-link" type="button">Translations</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-link" type="button">
+                  Other Chapters
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <h1 class="main-header-brand">Proverbs Everyday</h1>
+
+          <nav class="main-nav main-nav-right">
+            <ul class="nav-list" role="list">
+              <li class="nav-item">
+                <button class="btn btn-link" type="button">Back</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-link" type="button">Menu</button>
+              </li>
+            </ul>
+          </nav>
+
+          <p class="main-header-date">Today: 29 Sep 2022</p>
+        </div>
       </header>
 
-      <div class="content">
+      <div class="container content">
         <h2>Chapters</h2>
 
         <div class="cards">
@@ -79,10 +89,12 @@
         </div>
       </div>
 
-      <footer class="main-footer">
-        <p class="text-center">
-          <em>Proverbs Everyday V2 &copy; Davina Leong, 2022</em>
-        </p>
+      <footer class="main-footer p-y-400">
+        <div class="container">
+          <p class="ta-center | fsize-200">
+            <em>Proverbs Everyday V2 &copy; Davina Leong, 2022</em>
+          </p>
+        </div>
       </footer>
     </main>
   </body>
