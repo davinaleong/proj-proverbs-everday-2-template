@@ -2,16 +2,16 @@
 $ff-primary: family("nunito");
 $ff-secondary: family("nunito");
 
-$clr-primary-50: $clr-grey-50;
-$clr-primary-100: $clr-grey-100;
-$clr-primary-200: $clr-grey-200;
-$clr-primary-300: $clr-grey-300;
-$clr-primary-400: $clr-grey-400;
-$clr-primary-500: $clr-grey-500;
-$clr-primary-600: $clr-grey-600;
-$clr-primary-700: $clr-grey-700;
-$clr-primary-800: $clr-grey-800;
-$clr-primary-900: $clr-grey-900;
+$clr-primary-50: $clr-gray-50;
+$clr-primary-100: $clr-gray-100;
+$clr-primary-200: $clr-gray-200;
+$clr-primary-300: $clr-gray-300;
+$clr-primary-400: $clr-gray-400;
+$clr-primary-500: $clr-gray-500;
+$clr-primary-600: $clr-gray-600;
+$clr-primary-700: $clr-gray-700;
+$clr-primary-800: $clr-gray-800;
+$clr-primary-900: $clr-gray-900;
 
 $clr-action-light: $clr-blue-300;
 $clr-action: $clr-blue-500;
@@ -19,16 +19,16 @@ $clr-action-dark: $clr-blue-700;
 
 $clr-danger-400: $clr-red-400;
 
-$clr-neutral-50: $clr-grey-50;
-$clr-neutral-100: $clr-grey-100;
-$clr-neutral-200: $clr-grey-200;
-$clr-neutral-300: $clr-grey-300;
-$clr-neutral-400: $clr-grey-400;
-$clr-neutral-500: $clr-grey-500;
-$clr-neutral-600: $clr-grey-600;
-$clr-neutral-700: $clr-grey-700;
-$clr-neutral-800: $clr-grey-800;
-$clr-neutral-900: $clr-grey-900;
+$clr-neutral-50: $clr-gray-50;
+$clr-neutral-100: $clr-gray-100;
+$clr-neutral-200: $clr-gray-200;
+$clr-neutral-300: $clr-gray-300;
+$clr-neutral-400: $clr-gray-400;
+$clr-neutral-500: $clr-gray-500;
+$clr-neutral-600: $clr-gray-600;
+$clr-neutral-700: $clr-gray-700;
+$clr-neutral-800: $clr-gray-800;
+$clr-neutral-900: $clr-gray-900;
 
 :root {
   --fsize-base: #{$fsize-base};
@@ -68,16 +68,28 @@ body {
   --height-header: 5em;
   --height-footer: 4.2em;
 
-  --clr-text: #{$clr-grey-900};
-  --clr-bg: #{$clr-grey-50};
-  --clr-header-bg: #{$clr-grey-100};
-  --clr-blockquote-text: #{$clr-grey-900};
-  --clr-blockquote-bg: #{$clr-grey-100};
-  --clr-footer-bg: #{$clr-grey-100};
-  --clr-card-border: #{$clr-grey-100};
-  --clr-form-bg: #{$clr-grey-100};
-  --clr-form-input-text: #{$clr-grey-900};
-  --clr-form-input-bg: #{$clr-grey-50};
+  --clr-text: #{$clr-gray-900};
+  --clr-heading: #{$clr-gray-900};
+  --clr-bg: #{$clr-gray-50};
+
+  --clr-header-bg: #{$clr-gray-100};
+
+  --clr-blockquote-text: #{$clr-gray-900};
+  --clr-blockquote-bg: #{$clr-gray-100};
+
+  --clr-footer-bg: #{$clr-gray-100};
+
+  --clr-card-text: #{$clr-gray-900};
+  --clr-card-border: #{$clr-gray-100};
+  --clr-card-bg: transparent;
+  --clr-card-text-hover: #{$clr-gray-800};
+  --clr-card-border-hover: #{$clr-gray-100};
+  --clr-card-bg-hover: transparent;
+
+  --clr-form-text: #{$clr-gray-900};
+  --clr-form-bg: #{$clr-gray-100};
+  --clr-form-input-text: #{$clr-gray-900};
+  --clr-form-input-bg: #{$clr-gray-50};
 
   font-size: var(--fsize-base);
   font-family: var(--ff-primary);
@@ -87,16 +99,155 @@ body {
 }
 
 .theme-dark {
-  --clr-text: #{$clr-grey-50};
-  --clr-bg: #{$clr-grey-900};
-  --clr-header-bg: #{$clr-grey-800};
-  --clr-blockquote-text: #{$clr-grey-50};
-  --clr-blockquote-bg: #{$clr-grey-800};
-  --clr-footer-bg: #{$clr-grey-800};
-  --clr-card-border: #{$clr-grey-800};
-  --clr-form-bg: #{$clr-grey-800};
-  --clr-form-input-text: #{$clr-grey-50};
-  --clr-form-input-bg: #{$clr-grey-900};
+  --clr-text: #{$clr-gray-50};
+  --clr-heading: #{$clr-gray-50};
+  --clr-bg: #{$clr-gray-900};
+
+  --clr-header-bg: #{$clr-gray-800};
+
+  --clr-blockquote-text: #{$clr-gray-50};
+  --clr-blockquote-bg: #{$clr-gray-800};
+
+  --clr-footer-bg: #{$clr-gray-800};
+
+  --clr-card-text: #{$clr-gray-50};
+  --clr-card-border: #{$clr-gray-800};
+  --clr-card-bg: transparent;
+  --clr-card-text-hover: #{$clr-gray-100};
+  --clr-card-border-hover: #{$clr-gray-800};
+  --clr-card-bg-hover: transparent;
+
+  --clr-form-text: #{$clr-gray-50};
+  --clr-form-bg: #{$clr-gray-800};
+  --clr-form-input-text: #{$clr-gray-50};
+  --clr-form-input-bg: #{$clr-gray-900};
+}
+
+.theme-blue-gray {
+  --clr-text: #{$clr-gray-50};
+  --clr-heading: #{$clr-gray-50};
+  --clr-bg: #{$clr-blue-gray-500};
+
+  --clr-header-bg: #{$clr-blue-gray-600};
+
+  --clr-blockquote-text: #{$clr-gray-50};
+  --clr-blockquote-bg: #{$clr-blue-gray-600};
+
+  --clr-footer-bg: #{$clr-blue-gray-600};
+
+  --clr-card-text: #{$clr-gray-50};
+  --clr-card-border: #{$clr-blue-gray-600};
+  --clr-card-bg: transparent;
+  --clr-card-text-hover: #{$clr-gray-100};
+  --clr-card-border-hover: #{$clr-blue-gray-600};
+  --clr-card-bg-hover: transparent;
+
+  --clr-form-text: #{$clr-gray-50};
+  --clr-form-bg: #{$clr-blue-gray-600};
+  --clr-form-input-text: #{$clr-gray-50};
+  --clr-form-input-bg: #{$clr-blue-gray-500};
+}
+
+.theme-pretty {
+  --clr-text: #{$clr-gray-900};
+  --clr-heading: #{$clr-pink-900};
+  --clr-bg: #{$clr-pink-50};
+
+  --clr-header-bg: #{$clr-pink-100};
+
+  --clr-blockquote-text: #{$clr-purple-900};
+  --clr-blockquote-bg: #{$clr-purple-100};
+
+  --clr-footer-bg: #{$clr-pink-100};
+
+  --clr-card-text: #{$clr-purple-900};
+  --clr-card-border: #{$clr-purple-100};
+  --clr-card-bg: #{$clr-purple-100};
+  --clr-card-text-hover: #{$clr-pink-900};
+  --clr-card-border-hover: #{$clr-pink-100};
+  --clr-card-bg-hover: #{$clr-pink-100};
+
+  --clr-form-text: #{$clr-purple-900};
+  --clr-form-bg: #{$clr-purple-100};
+  --clr-form-input-text: #{$clr-purple-900};
+  --clr-form-input-bg: #{$clr-purple-50};
+}
+
+.theme-professional {
+  --clr-text: #{$clr-indigo-500};
+  --clr-heading: #{$clr-indigo-500};
+  --clr-bg: #{$clr-neutral-50};
+
+  --clr-header-bg: #{$clr-light-blue-50};
+
+  --clr-blockquote-text: #{$clr-indigo-600};
+  --clr-blockquote-bg: #{$clr-light-blue-50};
+
+  --clr-footer-bg: #{$clr-light-blue-50};
+
+  --clr-card-text: #{$clr-indigo-500};
+  --clr-card-border: #{$clr-light-blue-50};
+  --clr-card-bg: transparent;
+  --clr-card-text-hover: #{$clr-indigo-900};
+  --clr-card-border-hover: #{$clr-indigo-100};
+  --clr-card-bg-hover: transparent;
+
+  --clr-form-text: #{$clr-indigo-500};
+  --clr-form-bg: #{$clr-light-blue-50};
+  --clr-form-input-text: #{$clr-indigo-500};
+  --clr-form-input-bg: #{$clr-gray-50};
+}
+
+.theme-lamborghini {
+  --clr-text: #{$clr-gray-900};
+  --clr-heading: #{$clr-gray-900};
+  --clr-bg: #{$clr-yellow-500};
+
+  --clr-header-bg: #{$clr-yellow-400};
+
+  --clr-blockquote-text: #{$clr-gray-900};
+  --clr-blockquote-bg: #{$clr-yellow-100};
+
+  --clr-footer-bg: #{$clr-yellow-400};
+
+  --clr-card-text: #{$clr-gray-900};
+  --clr-card-border: #{$clr-yellow-400};
+  --clr-card-bg: #{$clr-yellow-400};
+  --clr-card-text-hover: #{$clr-gray-900};
+  --clr-card-border-hover: #{$clr-yellow-300};
+  --clr-card-bg-hover: #{$clr-yellow-300};
+
+  --clr-form-text: #{$clr-gray-900};
+  --clr-form-bg: #{$clr-yellow-400};
+  --clr-form-input-text: #{$clr-gray-900};
+  --clr-form-input-bg: #{$clr-yellow-100};
+}
+
+.theme-tehtarik {
+  --clr-text: #{$clr-brown-600};
+  --clr-heading: #{$clr-brown-500};
+  --clr-bg: #{$clr-brown-50};
+
+  --clr-header-bg: #{$clr-brown-100};
+
+  --clr-blockquote-text: #{$clr-brown-600};
+  --clr-blockquote-bg: #{$clr-brown-100};
+
+  --clr-footer-bg: #{$clr-brown-100};
+
+  --clr-card-text: #{$clr-gray-50};
+  --clr-card-border: #{$clr-brown-300};
+  --clr-card-bg: #{$clr-brown-300};
+  --clr-card-text-hover: #{$clr-gray-50};
+  --clr-card-border-hover: #{$clr-brown-300};
+  --clr-card-bg-hover: #{$clr-brown-300};
+
+  --clr-form-text: #{$clr-brown-50};
+  --clr-form-bg: #{$clr-brown-300};
+  --clr-form-input-text: #{$clr-brown-300};
+  --clr-form-input-bg: #{$clr-brown-50};
+
+  --clr-danger-400: #{$clr-red-100};
 }
 
 :focus {
@@ -119,13 +270,15 @@ h6 {
   font-weight: #{weight("light")};
 }
 
-a {
+a,
+a:where(:visited, :active) {
   color: var(--clr-action);
   text-decoration: none;
 }
 
-a:where(:hover, :visited, :active, :focus-within) {
-  color: var(--clr-action);
+a:where(:hover, :focus-within) {
+  color: var(--clr-action-dark);
+  transition: all 0.3s ease-in-out;
 }
 
 .clr-danger-400 {
@@ -137,6 +290,7 @@ a:where(:hover, :visited, :active, :focus-within) {
   align-items: center;
   border: none;
   font-size: size(300);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-link {
@@ -146,40 +300,47 @@ a:where(:hover, :visited, :active, :focus-within) {
   padding: 0;
 }
 
-.btn-link:where(:hover, :visited, :active, :focus-within) {
+.btn-link:where(:hover, :focus-within) {
   color: var(--clr-action-dark);
 }
 
 .btn-card {
   padding: spacer(200);
   border: thin solid var(--clr-card-border);
-  color: var(--clr-action);
-  background-color: transparent;
+  color: var(--clr-card-text);
+  background-color: var(--clr-card-bg);
+  border-radius: border-radius(50);
   flex-direction: column;
 }
 
+.btn-card:where(:hover, :focus-within) {
+  color: var(--clr-card-text-hover);
+  background-color: var(--clr-card-bg-hover);
+  border-color: var(--clr-card-border-hover);
+}
+
 .btn-primary {
-  color: #{$clr-grey-50};
+  color: #{$clr-gray-50};
   background-color: #{$clr-blue-500};
   padding: spacer(100) spacer(200);
-  border-radius: border-radius(100);
+  border-radius: border-radius(50);
   box-shadow: box-shadow(400);
 }
 
-.btn-primary:where(:hover, :visited, :active, :focus-within) {
-  background-color: #{$clr-blue-300};
+.btn-primary:where(:hover, :focus-within) {
+  background-color: #{$clr-blue-600};
 }
 
 .btn-secondary {
-  color: #{$clr-grey-50};
-  background-color: #{$clr-grey-500};
+  color: #{$clr-gray-50};
+  background-color: #{$clr-gray-500};
   padding: spacer(100) spacer(200);
-  border-radius: border-radius(100);
+  border-radius: border-radius(50);
   box-shadow: box-shadow(400);
 }
 
-.btn-secondary:where(:hover, :visited, :active, :focus-within) {
-  background-color: #{$clr-grey-400};
+.btn-secondary:where(:hover, :focus-within) {
+  background-color: #{$clr-gray-600};
 }
 
 .container {
@@ -300,15 +461,17 @@ a:where(:hover, :visited, :active, :focus-within) {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: spacer(400);
+  gap: spacer(200);
 }
 
 .page-heading {
   font-size: var(--fsize-heading);
+  color: var(--clr-heading);
 }
 
 .page-subheading {
   font-size: var(--fsize-subheading);
+  color: var(--clr-heading);
 }
 
 sup,
@@ -353,6 +516,7 @@ sub,
 }
 
 .form-label {
+  color: var(--clr-form-text);
   display: block;
   min-width: 10em;
 }
