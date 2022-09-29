@@ -34,7 +34,7 @@ $clr-neutral-900: $clr-gray-900;
   --fsize-base: #{$fsize-base};
   --fsize-small: #{$fsize-200};
   --fsize-regular: #{$fsize-400};
-  --fsize-large: #{$fsize-600};
+  --fsize-large: #{$fsize-500};
   --fsize-heading: #{$fsize-800};
   --fsize-subheading: #{$fsize-600};
   --fsize-sup: #{$fsize-200};
@@ -70,7 +70,7 @@ body {
 
   --clr-text: #{$clr-gray-900};
   --clr-heading: #{$clr-gray-900};
-  --clr-bg: #{$clr-gray-50};
+  --clr-bg: #{$clr-white};
 
   --clr-header-bg: #{$clr-gray-100};
 
@@ -176,7 +176,7 @@ body {
 .theme-professional {
   --clr-text: #{$clr-indigo-500};
   --clr-heading: #{$clr-indigo-500};
-  --clr-bg: #{$clr-neutral-50};
+  --clr-bg: #{$clr-white};
 
   --clr-header-bg: #{$clr-light-blue-50};
 
