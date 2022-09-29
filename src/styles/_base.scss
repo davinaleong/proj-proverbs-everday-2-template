@@ -39,6 +39,9 @@ $clr-neutral-900: color("grey", 900);
   --clr-form-bg: #{$clr-neutral-100};
   --clr-form-input-bg: #{$clr-neutral-50};
 
+  --height-header: 5em;
+  --height-footer: 4.2em;
+
   --ff-primary: #{$ff-primary};
   --ff-secondary: #{$ff-secondary};
 
@@ -165,8 +168,16 @@ a:where(:hover, :visited, :active, :focus-within) {
   padding-right: spacer(400);
 }
 
+.content {
+  min-height: calc(100vh - var(--height-header) - var(--height-footer));
+}
+
 .main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--clr-primary-100);
+  min-height: var(--height-header);
 }
 
 .main-header-grid {
@@ -324,5 +335,9 @@ sub,
 }
 
 .main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--height-footer);
   background-color: var(--clr-footer-bg);
 }
